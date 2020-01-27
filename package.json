@@ -1,0 +1,19 @@
+{
+  "name": "sports_app",
+  "version": "1.0.0",
+  "description": "Sports Club Management ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ishtiaqbhatti/sports_app.git"
+  },
+  "author": "Ishtiaq Bhatti",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ishtiaqbhatti/sports_app/issues"
+  },
+  "homepage": "https://github.com/ishtiaqbhatti/sports_app#readme"
+}
