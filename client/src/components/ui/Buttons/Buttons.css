@@ -1,0 +1,20 @@
+.customBtn {
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 2px 1px;
+  cursor: pointer;
+}
+
+.sm-delete {
+  background-color: #ff0000;
+}
+
+.add {
+  background-color: green;
+  font-size: 15px;
+}

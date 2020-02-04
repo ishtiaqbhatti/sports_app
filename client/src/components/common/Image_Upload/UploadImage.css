@@ -1,0 +1,16 @@
+#idofinput {
+  background-color: white;
+  border: 1px black solid;
+  width: 600px;
+  height: 30px;
+  margin-left: 50px;
+}
+.uploadButton {
+  padding: 2px;
+  background-color: blue;
+  color: white;
+}
+
+.uploadButton:hover {
+  cursor: pointer;
+}

@@ -1,0 +1,71 @@
+.home-search-banner{
+  width: 100%;
+  max-width: 890px;
+  position: relative;
+}
+.search-banner-head {
+  margin: 0 0 24px;
+}
+.search-banner-head h4{
+  color: #fff;
+  font-size: 30px;
+  margin: 0;
+  text-transform: capitalize;
+}
+.search-banner-head h4 span{
+  display: block;
+  font-size: 74px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.home-search-banner .form-group{
+  margin: 0 0 24px;
+}
+.home-search-banner .form-control{
+  min-height: 64px;
+  border: 10px solid rgba(84, 79, 79, 0.61);
+}
+.home-search-banner .search-label{
+  color: #fff;
+  font-size: 16px;
+  margin: 0;
+  padding: 3px 0 0;
+  cursor: inherit;
+  text-transform: capitalize;
+}
+.btn.yellow-style,
+.btn.blue-style{
+  border:5px solid;
+  font-weight: bold;
+  text-transform: uppercase;
+  /*border-color: #ffd70a;*/
+  background: #fff;
+}
+.btn.yellow-style:hover{
+  color: #fff;
+  /*background-color: #ffd70a;*/
+}
+.btn.blue-style{
+  border-color: #008dcf;
+}
+.btn.blue-style:hover{
+  color: #fff;
+  background-color: #008dcf;
+}
+.btn.yellow-style span,
+.btn.blue-style span{
+  margin: 0 5px 0 0;
+  display: inline-block;
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+.home-search-banner .btn-wrap .btn{
+  margin-left:25px; 
+}
+.home-search-banner .btn-wrap .btn:first-child{
+  margin: 0;
+}

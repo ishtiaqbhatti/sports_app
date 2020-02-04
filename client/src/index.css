@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+/* 
+html {
+  background-color: #d5dae6;
+} */
+
+html {
+  background-color: #f0f4f7 !important;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100%;
+  /* overflow: hidden; */
+}
+
+/* ::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+} */
