@@ -1,9 +1,9 @@
 import React from "react";
 import Modal from "react-modal";
-import SaveButton from "components/Buttons/SaveButton";
-import CancelButton from "components/Buttons/CancelButton";
-import InputGroup from "components/CustomInput/InputGroup";
-const Step3 = ({ data, onChange, nextStep, prevStep }) => {
+import SaveButton from "../../ui/Buttons/SaveButton";
+import CancelButton from "../../ui/Buttons/CancelButton";
+import InputGroup from "../../common/InputGroup";
+const Step1 = ({ data, onChange, nextStep }) => {
   return (
     <section
       className="d-flex align-items-center flex-column justify-content-center h-100"
@@ -33,26 +33,19 @@ const Step3 = ({ data, onChange, nextStep, prevStep }) => {
                 <form noValidate>
                   <div className="row">
                     <div className="form-group col-md-10 pl-10">
-                      <label htmlFor="inputEmail4">
-                        Create your First Group
-                      </label>
+                      <label htmlFor="inputEmail4">Enter your Club Name</label>
                       <InputGroup
-                        name="groupName"
-                        value={data.groupName}
+                        name="clubName"
+                        value={data.clubName}
                         onChange={onChange}
                       />
                     </div>
                   </div>
                   <div className="bd-top" />
-                  <div className="osr-btn-group p-b-15  text-center">
-                    <CancelButton
-                      label="Back"
-                      type="cancel"
-                      onClick={prevStep}
-                    />
+                  <div className="osr-btn-group p-b-15 text-center">
                     <SaveButton
                       disabled={data.clubName.length === 0}
-                      label="Save and Continue"
+                      label="Next"
                       type="save"
                       onClick={nextStep}
                     />
@@ -67,4 +60,4 @@ const Step3 = ({ data, onChange, nextStep, prevStep }) => {
   );
 };
 
-export default Step3;
+export default Step1;

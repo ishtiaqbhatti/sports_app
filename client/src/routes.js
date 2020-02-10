@@ -38,6 +38,8 @@ import UpgradeToPro from "views/UpgradeToPro/UpgradeToPro.js";
 import RTLPage from "views/RTLPage/RTLPage.js";
 
 import Home from "views/Home/Home.js";
+import ManagerAuth from "views/auth/ManagerAuth";
+import Journey from "views/auth/journey/Journey";
 
 const dashboardRoutes = [
   {
@@ -127,6 +129,18 @@ const dashboardRoutes = [
     name: "Home",
     component: Home,
     layout: "/"
+  },
+  {
+    path: "/register",
+    name: "Register",
+    component: ManagerAuth,
+    layout: '/'
+  },
+  {
+    path: "/journey",
+    name: "Journey",
+    component: Journey,
+    layout: '/'
   }
 ];
 

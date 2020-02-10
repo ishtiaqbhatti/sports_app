@@ -1,8 +1,8 @@
 import React from "react";
 import Modal from "react-modal";
-import SaveButton from "../../ui/Buttons/SaveButton";
-import CancelButton from "../../ui/Buttons/CancelButton";
-import InputGroup from "../../common/InputGroup";
+import SaveButton from "components/Buttons/SaveButton";
+
+import InputGroup from "components/CustomInput/InputGroup";
 const Step1 = ({ data, onChange, nextStep }) => {
   return (
     <section
@@ -42,7 +42,7 @@ const Step1 = ({ data, onChange, nextStep }) => {
                     </div>
                   </div>
                   <div className="bd-top" />
-                  <div className="osr-btn-group p-b-15  text-center">
+                  <div className="osr-btn-group p-b-15 text-center">
                     <SaveButton
                       disabled={data.clubName.length === 0}
                       label="Next"

@@ -1,8 +1,8 @@
 import React from "react";
 import Modal from "react-modal";
-import SaveButton from "components/Buttons/SaveButton";
-import CancelButton from "components/Buttons/CancelButton";
-import InputGroup from "components/CustomInput/InputGroup";
+import SaveButton from "../../ui/Buttons/SaveButton";
+import CancelButton from "../../ui/Buttons/CancelButton";
+import InputGroup from "../../common/InputGroup";
 const Step3 = ({ data, onChange, nextStep, prevStep }) => {
   return (
     <section

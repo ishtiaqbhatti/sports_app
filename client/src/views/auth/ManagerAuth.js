@@ -1,15 +1,15 @@
-import React, { Component } from "react";
-import RegisterForm from "../common/RegisterForm";
-import HomeBackground from "../../img/home-background.jpg";
+import React, { Component } from 'react';
+import RegisterForm from 'components/CustomInput/RegisterForm';
+import HomeBackground from 'assets/img/home-background.jpg'
 
 class ManagerAuth extends Component {
   state = {
     data: {
-      username: "",
-      email: "",
-      password: "",
-      password2: "",
-      role: "Manager"
+      username: '',
+      email: '',
+      password: '',
+      password2: '',
+      role: 'Manager'
     }
   };
 
@@ -43,8 +43,8 @@ class ManagerAuth extends Component {
       <section
         className="d-flex align-items-center flex-column justify-content-center h-100"
         style={{
-          backgroundImage: "url(" + HomeBackground + ")",
-          backgroundPosition: "center",
+          backgroundImage: 'url(' + HomeBackground + ')',
+          backgroundPosition: 'center',
           opacity: 0.9
         }}
       >

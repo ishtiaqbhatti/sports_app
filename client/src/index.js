@@ -15,18 +15,19 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React from "react";
-import ReactDOM from "react-dom";
-import { createBrowserHistory } from "history";
-import { Router, Route, Switch, Redirect } from "react-router-dom";
-import { Provider } from "react-redux";
-import configureStore from "store/store.js";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { createBrowserHistory } from 'history';
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import configureStore from 'store/store.js';
 // core components
-import Admin from "layouts/Admin.js";
-import Website from "layouts/Website/Website";
-import RTL from "layouts/RTL.js";
+import Admin from 'layouts/Admin.js';
+import Website from 'layouts/Website/Website';
+import RTL from 'layouts/RTL.js';
 
-import "assets/css/material-dashboard-react.css?v=1.8.0";
+import 'assets/css/material-dashboard-react.css?v=1.8.0';
+import 'assets/css/custom.css';
 
 const hist = createBrowserHistory();
 const store = configureStore();
@@ -40,5 +41,5 @@ ReactDOM.render(
       </Switch>
     </Router>
   </Provider>,
-  document.getElementById("root")
+  document.getElementById('root')
 );

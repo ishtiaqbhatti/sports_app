@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import HomeBackground from "assets/img/home-background.jpg";
 
-import "./Home1.css";
+
 
 class Home extends Component {
   render() {

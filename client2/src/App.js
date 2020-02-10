@@ -62,7 +62,7 @@ import "./styles/image-gallery.css";
 import ManagerAuth from "./components/auth/ManagerAuth";
 import Journey from "./components/auth/journey/Journey";
 class App extends Component {
-  componentDidMount() {}
+  componentDidMount() { }
   render() {
     console.log(this.props.lang);
     return (

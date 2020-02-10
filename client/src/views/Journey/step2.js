@@ -1,9 +1,9 @@
 import React from "react";
 import Modal from "react-modal";
-import SaveButton from "components/Buttons/SaveButton"
-import CancelButton from "components/Buttons/CancelButton";
-import InputGroup from "components/CustomInput/InputGroup";
-import SelectListGroup from "components/CustomInput/SelectListGroup"
+import SaveButton from "../../ui/Buttons/SaveButton";
+import CancelButton from "../../ui/Buttons/CancelButton";
+import InputGroup from "../../common/InputGroup";
+import SelectListGroup from "../../common/SelectListGroup";
 
 const Step2 = ({ data, onChange, nextStep, prevStep }) => {
   return (
