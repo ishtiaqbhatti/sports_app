@@ -1,0 +1,67 @@
+.header-img {
+  max-width: 100%;
+}
+
+header {
+  background: #26303d;
+}
+header .navbar {
+  padding: 15px 0;
+}
+header .navbar-brand {
+  padding: 0;
+  max-width: 200px;
+}
+.login-btn,
+header .navbar-expand-lg .navbar-nav .nav-item {
+  margin-left: 60px;
+}
+header .navbar-expand-lg .navbar-nav .nav-item:first--child {
+  margin-left: 0px;
+}
+header .navbar-expand-lg .navbar-nav .nav-link {
+  padding: 0;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: capitalize;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+}
+header .navbar-expand-lg .navbar-nav .nav-link:hover {
+  color: #ffd70a;
+}
+.lang-list {
+  padding: 0;
+  margin: 0 0 21px;
+  list-style: none;
+}
+.lang-list li {
+  width: auto;
+  margin-left: 15px;
+  display: inline-block;
+}
+.lang-list li:first-child {
+  margin-left: 0;
+}
+.lang-list li a {
+  width: 17px;
+  height: 17px;
+  display: block;
+}
+.lang-list li a img {
+  float: left;
+  width: 100%;
+}
+.login-btn {
+  width: 18px;
+  height: 20px;
+}
+
+.active-planners {
+  color: #fbdb52 !important;
+}
+
+.active-vendors {
+  color: #008dcf !important;
+}

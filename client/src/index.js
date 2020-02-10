@@ -1,58 +1,44 @@
+/*!
+
+=========================================================
+* Material Dashboard React - v1.8.0
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/material-dashboard-react
+* Copyright 2019 Creative Tim (https://www.creative-tim.com)
+* Licensed under MIT (https://github.com/creativetimofficial/material-dashboard-react/blob/master/LICENSE.md)
+
+* Coded by Creative Tim
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+*/
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
-import App from "./App";
-import setAuthToken from "./utils/setAuthToken";
-import jwt_decode from "jwt-decode";
-import { setCurrentUser, logoutUser } from "./actions/authActions";
-
+import { createBrowserHistory } from "history";
+import { Router, Route, Switch, Redirect } from "react-router-dom";
 import { Provider } from "react-redux";
-import configureStore from "./configureStore";
-// import "font-awesome/css/font-awesome.min.css";
+import configureStore from "store/store.js";
+// core components
+import Admin from "layouts/Admin.js";
+import Website from "layouts/Website/Website";
+import RTL from "layouts/RTL.js";
 
-import Modal from "react-modal";
+import "assets/css/material-dashboard-react.css?v=1.8.0";
 
+const hist = createBrowserHistory();
 const store = configureStore();
-
-if (localStorage.jwtToken) {
-  // Set auth token header auth
-  setAuthToken(localStorage.jwtToken);
-  // Decode token and get user info and exp
-  const decoded = jwt_decode(localStorage.jwtToken);
-  // Set user and isAuthenticated
-  store.dispatch(setCurrentUser(decoded));
-
-  // Check for expired token
-  const currentTime = Date.now() / 1000;
-  if (decoded.exp < currentTime) {
-    // Logout user
-    store.dispatch(logoutUser());
-    // Clear current Profile
-    // store.dispatch(clearCurrentProfile());
-    // Redirect to login
-    window.location.href = "/login";
-  }
-}
-
-Modal.setAppElement(document.getElementById("root"));
-
-const renderApp = () =>
-  ReactDOM.render(
-    <Provider store={store}>
-      <App />
-    </Provider>,
-    document.getElementById("root")
-  );
-
-if (process.env.NODE_ENV !== "production" && module.hot) {
-  module.hot.accept("./App", renderApp);
-}
-
-renderApp();
-
-// import 'bootstrap/dist/css/bootstrap.min.css';
-// import "jquery/dist/jquery";
-// import "popper.js";
-// import "bootstrap/dist/js/bootstrap.min.js";
-
-// ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(
+  <Provider store={store}>
+    <Router history={hist}>
+      <Switch>
+        <Route path="/admin" component={Admin} />
+        <Route path="/rtl" component={RTL} />
+        <Route path="/" component={Website} />
+      </Switch>
+    </Router>
+  </Provider>,
+  document.getElementById("root")
+);
