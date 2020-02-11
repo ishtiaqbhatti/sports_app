@@ -3,11 +3,11 @@ import { Switch, Route, Redirect } from "react-router-dom";
 import Header from "./header/Header";
 import Footer from "./footer/Footer";
 
-import routes from "routes.js";
+import websiteRoutes from "websiteRoutes";
 
 const switchRoutes = (
   <Switch>
-    {routes.map((prop, key) => {
+    {websiteRoutes.map((prop, key) => {
       if (prop.layout === "/") {
         return (
           <Route

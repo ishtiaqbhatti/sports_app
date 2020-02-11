@@ -123,24 +123,6 @@ const dashboardRoutes = [
     icon: Unarchive,
     component: UpgradeToPro,
     layout: "/admin"
-  },
-  {
-    path: "/",
-    name: "Home",
-    component: Home,
-    layout: "/"
-  },
-  {
-    path: "/register",
-    name: "Register",
-    component: ManagerAuth,
-    layout: '/'
-  },
-  {
-    path: "/journey",
-    name: "Journey",
-    component: Journey,
-    layout: '/'
   }
 ];
 

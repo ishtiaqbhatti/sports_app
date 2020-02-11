@@ -8,7 +8,7 @@ import { makeStyles } from "@material-ui/core/styles";
 // core components
 import Navbar from "components/Navbars/Navbar.js";
 import Footer from "components/Footer/Footer.js";
-// import Sidebar from "components/Sidebar/Sidebar"
+import Sidebar from "components/Sidebar/Sidebar";
 import FixedPlugin from "components/FixedPlugin/FixedPlugin.js";
 
 import routes from "routes.js";
@@ -95,7 +95,7 @@ export default function Admin({ ...rest }) {
   }, [mainPanel]);
   return (
     <div className={classes.wrapper}>
-      {/* <Sidebar
+      <Sidebar
         routes={routes}
         logoText={"Creative Tim"}
         logo={logo}
@@ -104,7 +104,7 @@ export default function Admin({ ...rest }) {
         open={mobileOpen}
         color={color}
         {...rest}
-      /> */}
+      />
       <div className={classes.mainPanel} ref={mainPanel}>
         <Navbar
           routes={routes}
@@ -117,8 +117,8 @@ export default function Admin({ ...rest }) {
             <div className={classes.container}>{switchRoutes}</div>
           </div>
         ) : (
-            <div className={classes.map}>{switchRoutes}</div>
-          )}
+          <div className={classes.map}>{switchRoutes}</div>
+        )}
         {getRoute() ? <Footer /> : null}
         <FixedPlugin
           handleImageClick={handleImageClick}

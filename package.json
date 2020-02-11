@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/ishtiaqbhatti/sports_app#readme",
   "dependencies": {
+    "@material-ui/styles": "^4.9.0",
     "concurrently": "^5.1.0",
     "cookie-parser": "^1.4.4",
     "cors": "^2.8.5",
@@ -35,6 +36,7 @@
     "morgan": "^1.9.1",
     "nodemon": "^2.0.2",
     "react-modal": "^3.11.1",
+    "react-select-country-list": "^2.1.2",
     "xss-clean": "^0.1.1"
   }
 }
