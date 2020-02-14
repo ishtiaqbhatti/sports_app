@@ -1,5 +1,5 @@
-const asyncHandler = require('../middleware/async');
-const Athelete = require('../models/Athelete');
+const asyncHandler = require("../middleware/async");
+const Athelete = require("../models/Athelete");
 
 // @desc      Build Athelete Profile
 // @route     POST /api/v1/athlete/register
@@ -38,7 +38,7 @@ exports.getAthletesbyUser = asyncHandler(async (req, res, next) => {
 // @route     PUT /api/v1/athlete/${athleteId}
 // @access    Private
 exports.updateAthelete = asyncHandler(async (req, res, next) => {
-  const { athlete } = req.params;
+  const { athleteId } = req.params;
   const updatedAthelete = {
     name: req.body.name
   };
@@ -57,7 +57,7 @@ exports.updateAthelete = asyncHandler(async (req, res, next) => {
 // @route     DELETE /api/v1/athlete/${athleteId}
 // @access    Private
 exports.deleteAthlete = asyncHandler(async (req, res, next) => {
-  const { athlete } = req.params;
+  const { athleteId } = req.params;
 
   // Update Athlete
   const athlete = await Athelete.findOneAndDelete({ _id: athleteId });

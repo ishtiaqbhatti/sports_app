@@ -15,14 +15,25 @@ import GridContainer from "components/Grid/GridContainer.js";
 
 const styles = {
   dialogPaper: {
-    minHeight: "50vh",
+    minHeight: "60vh",
     maxHeight: "90vh",
-    minWidth: "50vw "
+    minWidth: "60vw "
   }
 };
 
-const FormDialog = ({ classes, dialogState, dialogText }) => {
-  const [open, setOpen] = React.useState(dialogState);
+const FormDialog = ({
+  classes,
+  dialogState,
+  dialogText,
+  form,
+  next,
+  previous,
+  nextStep,
+  previousStep,
+  prevBtnText,
+  nextBtnText
+}) => {
+  const [open, setOpen] = React.useState(true);
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -43,46 +54,33 @@ const FormDialog = ({ classes, dialogState, dialogText }) => {
       >
         <DialogTitle id="form-dialog-title">{dialogText}</DialogTitle>
         <DialogContent>
-          {/* <DialogContentText>
-            To subscribe to this website, please enter your email address here.
-            We will send updates occasionally.
-          </DialogContentText>
-          <TextField
-            autoFocus
-            margin="dense"
-            id="name"
-            label="Email Address"
-            type="email"
-            fullWidth
-          />
-          */}
-
-          <form noValidate>
-            <div className="row">
-              <div className="form-group col-md-10 pl-10">
-                <label htmlFor="inputEmail4">Enter your Club Name</label>
-                <InputGroup
-                  name="clubName"
-                  //    value={data.clubName}
-                  //    onChange={onChange}
-                />
-              </div>
-            </div>
-            <div className="bd-top" />
-          </form>
+          {form}
+          <div className="bd-top" />
         </DialogContent>
 
         <DialogActions>
-          {/* <Button color="warning" round>
-            
-          </Button> */}
-          <Button color="success" round>
-            Next
-          </Button>
+          {previous ? (
+            <Button color="warning" round onClick={previousStep}>
+              {prevBtnText}
+            </Button>
+          ) : null}
+          {next ? (
+            <Button color="success" round onClick={nextStep}>
+              {nextBtnText}
+            </Button>
+          ) : null}
         </DialogActions>
       </Dialog>
     </div>
   );
+};
+
+FormDialog.defaultProps = {
+  nextBtnText: "Next",
+  prevBtnText: "Previous",
+  previous: true,
+  next: true,
+  dialogText: "Tell us About Yourself"
 };
 
 export default withStyles(styles)(FormDialog);

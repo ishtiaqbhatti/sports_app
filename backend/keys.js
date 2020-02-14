@@ -1,1 +1,0 @@
-mongodb+srv://dimitris:<password>@cluster0-xfgig.mongodb.net/test?retryWrites=true&w=majority

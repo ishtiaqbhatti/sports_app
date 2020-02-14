@@ -7,8 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "client-install": "npm install --prefix client",
     "start": "node server.js",
-    "server": "nodemon backend/server.js --ignore './frontend/'",
-    "client": "npm start --prefix frontend",
+    "server": "nodemon backend/server.js --ignore './client/'",
+    "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
   },
@@ -24,6 +24,7 @@
   "homepage": "https://github.com/ishtiaqbhatti/sports_app#readme",
   "dependencies": {
     "@material-ui/styles": "^4.9.0",
+    "colors": "^1.4.0",
     "concurrently": "^5.1.0",
     "cookie-parser": "^1.4.4",
     "cors": "^2.8.5",
@@ -33,6 +34,8 @@
     "express-rate-limit": "^5.0.0",
     "helmet": "^3.21.2",
     "hpp": "^0.2.3",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.0",
     "morgan": "^1.9.1",
     "nodemon": "^2.0.2",
     "react-modal": "^3.11.1",

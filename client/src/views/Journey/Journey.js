@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import countryList from "react-select-country-list";
-import Step1 from "./step1";
-import Step2 from "./step2";
-import Step3 from "./step3";
+import ClubName from "components/Form/ClubName";
+import ClubDetails from "components/Form/ClubDetails";
+import GroupName from "components/Form/GroupName";
 import Dialog from "components/Dialog/Dialog";
 class Journey extends Component {
   state = {
@@ -58,39 +58,42 @@ class Journey extends Component {
   };
 
   render() {
+    const { data } = this.state;
     const { step } = this.state.data;
     // eslint-disable-next-line default-case
-    // switch (step) {
-    //   case 1:
-    //     return (
-    //       <Step1
-    //         nextStep={this.nextStep}
-    //         onChange={this.onChange}
-    //         data={this.state.data}
-    //       />
-    //     );
+    switch (step) {
+      case 1:
+        return (
+          <Dialog
+            form={
+              <ClubName clubName={data.clubName} onChange={this.onChange} />
+            }
+            previous={false}
+            nextStep={this.nextStep}
+          />
+        );
 
-    //   case 2:
-    //     return (
-    //       <Step2
-    //         nextStep={this.nextStep}
-    //         prevStep={this.prevStep}
-    //         onChange={this.onChange}
-    //         data={this.state.data}
-    //       />
-    //     );
+      case 2:
+        return (
+          <Dialog
+            form={<ClubDetails data={data} onChange={this.onChange} />}
+            nextStep={this.nextStep}
+            previousStep={this.prevStep}
+          />
+        );
 
-    //   case 3:
-    //     return (
-    //       <Step3
-    //         nextStep={this.nextStep}
-    //         prevStep={this.prevStep}
-    //         onChange={this.onChange}
-    //         data={this.state.data}
-    //       />
-    //     );
-    // }
-    return <Dialog />;
+      case 3:
+        return (
+          <Dialog
+            form={
+              <GroupName groupName={data.groupName} onChange={this.onChange} />
+            }
+            nextStep={this.nextStep}
+            previousStep={this.prevStep}
+            nextBtnText="Save and Continue"
+          />
+        );
+    }
   }
 }
 

@@ -1,11 +1,10 @@
-const asyncHandler = require('../middleware/async');
-const Club = require('../models/Club');
+const asyncHandler = require("../middleware/async");
+const Club = require("../models/Club");
 
 // @desc      Register club by Manager
 // @route     POST /api/v1/club/register
 // @access    Private
 exports.registerClub = asyncHandler(async (req, res, next) => {
-  const { id } = req;
   const { id, name, country, city, phoneNumber } = req.body;
 
   // Create club
@@ -30,7 +29,7 @@ exports.approveClub = asyncHandler(async (req, res, next) => {
 
   return res
     .status(200)
-    .json({ success: 1, message: 'Successfully Approved the Club' });
+    .json({ success: 1, message: "Successfully Approved the Club" });
 });
 
 // @desc      Approve club by Admin
@@ -43,7 +42,7 @@ exports.declineClub = asyncHandler(async (req, res, next) => {
 
   return res
     .status(200)
-    .json({ success: 1, message: 'Successfully Decline the Club' });
+    .json({ success: 1, message: "Successfully Decline the Club" });
 });
 
 // @desc      Get All Clubs for Admin
@@ -51,7 +50,7 @@ exports.declineClub = asyncHandler(async (req, res, next) => {
 // @access    Private
 exports.getAllClubsforAdmin = asyncHandler(async (req, res, next) => {
   const allClubs = await Club.find({})
-    .populate('userId')
+    .populate("userId")
     .lean();
 
   return res.status(200).json({ success: 1, data: allClubs });
