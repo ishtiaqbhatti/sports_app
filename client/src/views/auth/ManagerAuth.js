@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import RegisterForm from 'components/CustomInput/RegisterForm';
-import HomeBackground from 'assets/img/home-background.jpg'
+import HomeBackground from 'assets/img/home-background.jpg';
+import { registerPublicUser } from 'store/auth/actions/index'
 
 class ManagerAuth extends Component {
   state = {
@@ -12,6 +14,11 @@ class ManagerAuth extends Component {
       role: 'Manager'
     }
   };
+
+  componentDidMount = () => {
+    const data = { username: 'ishtiaq' }
+    this.props.registerPublicUser(data)
+  }
 
   onChange = e => {
     this.setState({
@@ -38,6 +45,16 @@ class ManagerAuth extends Component {
     );
   }
 
+  onSubmit = async (e) => {
+    e.preventDefault();
+    const { data } = this.state;
+    const { publicRegister } = this.props;
+
+    await registerPublicUser(data)
+
+
+  }
+
   render() {
     return (
       <section
@@ -62,4 +79,8 @@ class ManagerAuth extends Component {
   }
 }
 
-export default ManagerAuth;
+const mapStateToProps = (state) => ({
+  auth: state.auth
+});
+
+export default connect(mapStateToProps, { registerPublicUser })(ManagerAuth);

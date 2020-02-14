@@ -1,4 +1,4 @@
-import { SET_LOADING_FALSE, SET_LOADING_TRUE } from "../types";
+import { SET_LOADING_FALSE, SET_LOADING_TRUE, CATCH_ERRORS } from "../types";
 // Set Loading to true for Async Calls
 export const setLoadingTrue = () => dispatch => {
   dispatch({ type: SET_LOADING_TRUE });
