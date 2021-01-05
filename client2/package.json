@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@types/react": "^16.8.23",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "browser-image-size": "^1.1.0",
     "classnames": "^2.2.6",
     "disqus-react": "^1.0.6",
